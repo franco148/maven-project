@@ -17,5 +17,11 @@ pipeline {
                 }
             }
         }
+
+        stage('Deploy to Staging') {
+            steps {
+                build job: 'maven-deploy-to-staging'
+            }
+        }
     }
 }
